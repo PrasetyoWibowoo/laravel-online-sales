@@ -18,3 +18,4 @@ old('price',$product->price??0) }}" required>
 <label>
 <input type="checkbox" name="is_active" value="1" @checked(old('is_active',$product->is_active??true))> Aktif</label>
 <button class="btn">Simpan</button>
+
