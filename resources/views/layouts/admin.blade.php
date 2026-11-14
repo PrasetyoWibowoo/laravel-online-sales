@@ -4,3 +4,4 @@
 @endforeach
 <a href="{{ route('shop.index') }}">↗ Lihat Toko</a><form method="POST" action="{{ route('logout') }}">@csrf<button class="btn-light">Keluar</button></form></aside>
 <main class="admin-main"><div class="admin-context"><span>Administrasi / @yield('title','Dashboard')</span><span>{{ auth()->user()->name }} · Admin</span></div>@include('layouts.flash') @yield('content')</main></div><script src="{{ asset('js/store.js') }}" defer></script></body></html>
+

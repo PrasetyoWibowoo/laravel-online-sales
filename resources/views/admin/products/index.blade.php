@@ -35,3 +35,4 @@
 </tr>@endforeach</table></div>
 <div style="margin-top:16px">{{ $products->links() }}</div>
 </div>@endsection
+

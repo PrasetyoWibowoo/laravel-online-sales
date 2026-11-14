@@ -23,3 +23,4 @@
 <script src="{{ asset('js/store.js') }}" defer></script>
 </body>
 </html>
+

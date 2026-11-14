@@ -6,3 +6,4 @@
 <p class="muted">Halaman sementara milestone M1. Halaman ini diganti oleh fitur aslinya pada M4 (katalog) dan M7 (dashboard admin).</p>
 </div>
 @endsection
+

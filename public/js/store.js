@@ -18,3 +18,4 @@ if (shipping) {
     shipping.addEventListener('change',updateTotal);
     updateTotal();
 }
+
