@@ -5,7 +5,11 @@ use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\ShippingServiceController;
 use App\Http\Controllers\Admin\StockController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductCatalogController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/', [ProductCatalogController::class, 'index'])->name('shop.index');
+Route::get('/produk/{product:slug}', [ProductCatalogController::class, 'show'])->name('shop.show');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
@@ -15,8 +19,6 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
-
-Route::get('/', fn () => view('placeholder', ['title' => 'Katalog (sementara)']))->name('shop.index');
 
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/', fn () => view('placeholder', ['title' => 'Dashboard Admin (sementara)']))->name('dashboard');
